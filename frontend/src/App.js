@@ -1,9 +1,18 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+
+import CadastrarBovino from './pages/bovino/cadastrarBovino';
+
 
 function App() {
   return (
-    <div className="App">
-      <h1>Teste</h1>
-    </div>
+    <BrowserRouter>
+      <Routes> 
+          <Route path='/cadastrarbovino' element={<CadastrarBovino/>} />
+      </Routes>
+    </BrowserRouter>
+
   );
 }
 
