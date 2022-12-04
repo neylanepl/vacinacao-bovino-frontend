@@ -18,7 +18,7 @@ const Inicio = () => {
             
                 <div className="text-center" style={{}}>        
                     <div><button variant="warning"  type="submit" value="submit" className="btn" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", width: "40%", margin: "20px"}} onClick={e => navigate('/listarvacinas')}>Vacinas</button></div>
-                    <div><button variant="warning"  type="submit" value="submit" className="btn" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", width: "40%", margin: "20px"}} onClick={e => navigate('/')}>Fabricantes de vacinas</button></div>
+                    <div><button variant="warning"  type="submit" value="submit" className="btn" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", width: "40%", margin: "20px"}} onClick={e => navigate('/listaFabricante')}>Fabricantes de vacinas</button></div>
                     <div><button variant="warning"  type="submit" value="submit" className="btn" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", width: "40%", margin: "20px"}} onClick={e => navigate('/listaanimaiscarteiravacinacao')}>Bovinos</button></div>
                     <div><button variant="warning"  type="submit" value="submit" className="btn" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", width: "40%", margin: "20px"}} onClick={e => navigate('/listapessoa')}>Usuários</button> </div>
                
