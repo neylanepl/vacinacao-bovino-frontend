@@ -5,9 +5,6 @@ import '../../styles/css/cadastrarBovino.css';
 import Nav from '../../components/nav';
 import Footer from '../../components/footer';
 
-
-
-
 const CadastrarBovino = () => {
 
     const [NomeForm, setNomeForm] = useState('');

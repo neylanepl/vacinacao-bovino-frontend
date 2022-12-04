@@ -47,7 +47,7 @@ const EditarBovino = () => {
                                 <Form.Check type="radio" id="Vermelho" label="Vermelho" onClick={(e) => setCorForm(e.target.id)}/>  
                             </div>
                         </div>
-                        <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Salvar</button>
+                        <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Editar</button>
                     </div>            
                 </form>
             </div>
