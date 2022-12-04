@@ -15,6 +15,7 @@ import Login from './pages/pessoa/login';
 import CadastrarPessoa from './pages/pessoa/cadastrarPessoa';
 import EditarPessoa from './pages/pessoa/editarPessoa';
 import ListaPessoa from './pages/pessoa/listaPessoa';
+import CadastrarFabricante from './pages/fabricante/cadastrarFabricante';
 
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path='/cadastrarPessoa' element={<CadastrarPessoa/>} />
           <Route path='/editarPessoa' element={<EditarPessoa/>} />
           <Route path='/listaPessoa' element={<ListaPessoa/>} />
+          <Route path='/cadastrarFabricante' element={<CadastrarFabricante/>} />
       </Routes>
     </BrowserRouter>
 
