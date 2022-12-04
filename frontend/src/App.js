@@ -11,6 +11,8 @@ import CadastrarVacina from './pages/vacina/cadastrarVacina';
 import EditarVacina from './pages/vacina/editarVacina';
 import ListarVacinas from './pages/vacina/listarVacinas';
 
+import Login from './pages/pessoa/login';
+
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           <Route path='/cadastrarvacina' element={<CadastrarVacina/>} />
           <Route path='/editarvacina' element={<EditarVacina/>} />
           <Route path='/listarvacinas' element={<ListarVacinas/>} />
+
+          <Route path='/login' element={<Login/>} />
       </Routes>
     </BrowserRouter>
 
