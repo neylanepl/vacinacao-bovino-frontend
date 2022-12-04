@@ -12,6 +12,8 @@ import EditarVacina from './pages/vacina/editarVacina';
 import ListarVacinas from './pages/vacina/listarVacinas';
 
 import Login from './pages/pessoa/login';
+import CadastrarPessoa from './pages/pessoa/cadastrarPessoa';
+
 
 
 function App() {
@@ -29,6 +31,7 @@ function App() {
           <Route path='/listarvacinas' element={<ListarVacinas/>} />
 
           <Route path='/login' element={<Login/>} />
+          <Route path='/cadastrarPessoa' element={<CadastrarPessoa/>} />
       </Routes>
     </BrowserRouter>
 

@@ -15,7 +15,6 @@ const Login = () => {
     return (
         <div>
             <Nav/>
-            
             <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Login </h1>
             <div className="formularioLogin" style={{marginBottom: "10%"}}>
                 <form className="formulario" onSubmit={e => {handleSubmitForm (e)}}>
