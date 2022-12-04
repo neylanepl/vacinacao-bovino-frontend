@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 
-import { InputForm} from '../../components/inputs';
 import { Form } from 'react-bootstrap';
 import '../../styles/css/cadastrarBovino.css';
-import { Button } from 'react-bootstrap';
 import Nav from '../../components/nav';
 import Footer from '../../components/footer';
 
