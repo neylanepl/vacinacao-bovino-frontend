@@ -13,7 +13,8 @@ import ListarVacinas from './pages/vacina/listarVacinas';
 
 import Login from './pages/pessoa/login';
 import CadastrarPessoa from './pages/pessoa/cadastrarPessoa';
-
+import EditarPessoa from './pages/pessoa/editarPessoa';
+import ListaPessoa from './pages/pessoa/listaPessoa';
 
 
 function App() {
@@ -32,6 +33,8 @@ function App() {
 
           <Route path='/login' element={<Login/>} />
           <Route path='/cadastrarPessoa' element={<CadastrarPessoa/>} />
+          <Route path='/editarPessoa' element={<EditarPessoa/>} />
+          <Route path='/listaPessoa' element={<ListaPessoa/>} />
       </Routes>
     </BrowserRouter>
 
