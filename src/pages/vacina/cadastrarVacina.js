@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Nav from '../../components/nav';
 import Footer from '../../components/footer';
 import '../../styles/css/cadastrarVacina.css';
+import rodape from '../../styles/css/footer.css'
 
 const CadastrarVacina = () => {
 
@@ -49,7 +50,7 @@ const CadastrarVacina = () => {
                     </div>            
                 </form>
             </div>
-            <Footer/>
+           <Footer/>
         </div>
     );
 };

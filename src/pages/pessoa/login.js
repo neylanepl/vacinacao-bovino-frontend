@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../../styles/css/login.css';
 import Nav from '../../components/nav';
 import Footer from '../../components/footer';
+import rodape from '../../styles/css/footer.css'
 
 const Login = () => {
 
@@ -32,6 +33,8 @@ const Login = () => {
                     </div>            
                 </form>
             </div>
+            
+
             <Footer/>
         </div>
     );   

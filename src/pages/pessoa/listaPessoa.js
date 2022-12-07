@@ -3,6 +3,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Nav from '../../components/nav';
 import Footer from '../../components/footer';
+import rodape from '../../styles/css/footer.css'
 
 const ListaPessoa = () => {
 
@@ -12,7 +13,7 @@ const ListaPessoa = () => {
         <div>
             <Nav/>
             <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}>Usuários cadastrados no sistema</h1>
-            <div style={{margin: "5%", marginLeft: "20%", marginRight: "20%"}}>
+            <div className="t" style={{margin: "5%", marginLeft: "20%", marginRight: "20%"}}>
                 <div className="text-center" style={{marginBottom: "5%"}}><button  className="btn btn-success" style={{backgroundColor:"#83A93A",borderColor: "#6D3B00"}} variant="warning"  onClick={e => navigate('/cadastrarPessoa')}>Cadastrar Usuário</button></div>
                 
                 <table className="table table-bordered table-bordered" >
@@ -73,7 +74,9 @@ const ListaPessoa = () => {
                 </table>
 
             </div>
-            <Footer/>
+            
+
+           <Footer/>
         </div>
     );
 

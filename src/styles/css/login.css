@@ -42,6 +42,10 @@
     padding: 0.3em;
 }
 
+.btn-success {
+    width: 8em;
+}
+
 .botao {
     background-color: #83A93A;
     color: white;
