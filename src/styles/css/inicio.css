@@ -2,6 +2,31 @@
     margin: 0;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding-bottom: 20em;
+}
+
+.img {
+    width: 50%;
+    height: auto;
+    margin-bottom: 0%;
+}
+
+.telaVaca {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.formulario {
+    width: 50%;
+}
+
 .guardaBotao {
     display: flex;
     flex-direction: column;
