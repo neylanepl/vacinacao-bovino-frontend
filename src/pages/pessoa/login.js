@@ -5,13 +5,33 @@ import '../../styles/css/login.css';
 import Nav from '../../components/nav';
 import Footer from '../../components/footer';
 
+import VacinacaoBovinoAPI from '../../scripts/connectionAPI';
+import { login } from '../../scripts/authencation';
+
 const Login = () => {
 
-    const [nomeForm, setNomeForm] = useState('');
+    const [loginForm, setLoginForm] = useState('');
     const [senhaForm, setSenhaForm] = useState('');
 
-    const handleSubmitForm = async e => {}
     const navigate = useNavigate();
+
+    const handleSubmitForm = async e => {
+        e.preventDefault();
+        const payload = {
+            login: loginForm,
+            senha: senhaForm
+        };
+
+        console.log("vai ser enviado: " + payload.login);
+
+        try {
+            const { data } = await VacinacaoBovinoAPI.post('/pessoa/autenticar', payload);
+            login(data.toke, data.id);
+            navigate('/');
+        } catch (error) {
+            alert("Credenciais inválidas!");
+        }
+    };
 
     return (
         <div>
@@ -21,7 +41,7 @@ const Login = () => {
                 <form className="formulario" onSubmit={e => {handleSubmitForm (e)}}>
                     <div className="sub-div">
                         <div className="id_"><p>Email</p></div> 
-                        <input type="text" className="nomePessoa" onChange={e => setNomeForm(e.target.value)}/>
+                        <input type="text" className="nomePessoa" onChange={e => setLoginForm(e.target.value)}/>
 
                         <div className="id_"><p>Senha</p></div> 
                         <input type="text" className="senhaPessoa" onChange={e => setSenhaForm(e.target.value)}/>

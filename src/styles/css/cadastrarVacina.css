@@ -46,12 +46,10 @@
 
 .botaoVoltar {
     margin-left: 10px;
-    background-color: #93c041;
-    border-radius: 10px;
-    border-color: black;
-    
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
 }
-
 .bi {
     color: black;
 }

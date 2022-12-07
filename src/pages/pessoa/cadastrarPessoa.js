@@ -17,8 +17,26 @@ const CadastrarPessoa = () => {
     const [bairroForm, setBairroForm] = useState('');
     const [ruaForm, setRuaForm] = useState('');
     const [numeroForm, setNumeroForm] = useState('');
+    const [loginForm, setLoginForm] = useState('');
+    const [senhaForm, setSenhaForm] = useState('');
 
-    const handleSubmitForm = async e => {}
+    const handleSubmitForm = async e => {
+        e.preventDefault();
+        const payload = {
+            nome: nomeForm,
+            telefone: telefoneForm,
+            cpf: cpfForm,
+            email: emailForm,
+            cidade: cidadeForm,
+            estado: estadoForm,
+            cep: cepForm,
+            bairro: bairroForm,
+            rua: ruaForm,
+            numero: numeroForm,
+            login: loginForm,
+            senha: senhaForm
+        };
+    };
 
     return (
         <div>
@@ -54,9 +72,14 @@ const CadastrarPessoa = () => {
                         <div className="id_"><p>Rua</p></div> 
                         <input type="text" className="ruaPessoa" onChange={e => setRuaForm(e.target.value)}/>
 
-                        <div className="id_"><p>Numero</p></div> 
+                        <div className="id_"><p>Número</p></div> 
                         <input type="number" className="numeroPessoa" onChange={e => setNumeroForm(e.target.value)}/>
 
+                        <div className="id_"><p>Login</p></div> 
+                        <input type="text" className="numeroPessoa" onChange={e => setLoginForm(e.target.value)}/>
+
+                        <div className="id_"><p>Senha</p></div> 
+                        <input type="password" className="numeroPessoa" onChange={e => setSenhaForm(e.target.value)}/>
 
                         <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Cadastrar</button>
                     </div>            
