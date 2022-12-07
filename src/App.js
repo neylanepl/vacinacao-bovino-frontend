@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Inicio from './pages/inicio/inicio';
+import InicioContext from './pages/inicio/inicioContext';
 import CadastrarBovino from './pages/bovino/cadastrarBovino';
 import EditarBovino from './pages/bovino/editarBovino';
 import CadastrarAplicacao from './pages/aplicacao/cadastrarAplicacao';
@@ -23,7 +23,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes> 
-          <Route path='/' element={<Inicio/>} />
+          <Route path='/' element={<InicioContext/>} />
           <Route path='/cadastrarbovino' element={<CadastrarBovino/>} />
           <Route path='/editarbovino' element={<EditarBovino/>} />
           <Route path='/cadastraraplicacao' element={<CadastrarAplicacao/>} />
@@ -32,7 +32,6 @@ function App() {
           <Route path='/cadastrarvacina' element={<CadastrarVacina/>} />
           <Route path='/editarvacina' element={<EditarVacina/>} />
           <Route path='/listarvacinas' element={<ListarVacinas/>} />
-
           <Route path='/login' element={<Login/>} />
           <Route path='/cadastrarPessoa' element={<CadastrarPessoa/>} />
           <Route path='/editarPessoa' element={<EditarPessoa/>} />

@@ -28,7 +28,7 @@ const Login = () => {
 
                         <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Entrar</button>
 
-                        <div className="text-center" style={{marginBottom: "5%"}}><button  className="btn btn-success" style={{backgroundColor:"#83A93A",borderColor: "#6D3B00"}} variant="warning"  onClick={e => navigate('/cadastrarPessoa')}>Cadastrar Fabricante</button></div>
+                        <div className="text-center" style={{marginBottom: "5%"}}><button  className="btn btn-success" style={{backgroundColor:"#6D3B00",borderColor: "#6D3B00"}} variant="warning"  onClick={e => navigate('/cadastrarPessoa')}>Cadastre-se</button></div>
                     </div>            
                 </form>
             </div>
