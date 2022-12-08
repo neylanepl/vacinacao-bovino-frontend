@@ -32,31 +32,28 @@ const CadastrarBovino = () => {
                         <input type="date" className="idadeBovino" onChange={e => setDataForm(e.target.value)}/>
                             
                         <div className="id_"><p>Sexo</p></div> 
-                        <div className="id_">
-                            <div className="check-option" style={{marginBottom: "15px", display: "flex", justifyContent: "space-evenly"}}>
-                                <Form.Check type="radio"  id="Femea" label="Fêmea" onClick={(e) => setSexoForm(e.target.id)}/>
-                                <Form.Check type="radio" id="Macho" label="Macho" onClick={(e) => setSexoForm(e.target.id)}/>
-                            </div>
-                        </div>
+                        <select name="select" className="numeroPessoa" required onChange={e => setSexoForm(e.target.value)} >
+                            <option value="">Selecione um sexo</option>
+                            <option value="Femea">Fêmea</option>
+                            <option value="Macho">Macho</option>
+                        </select>
 
                         <div className="id_"><p>Cor</p></div> 
-                        <div className="id_">
-                            <div className="check-option" style={{marginBottom: "15px", display: "flex", justifyContent: "space-evenly"}}>
-                                <Form.Check type="radio" id="Preto" label="Preto" onClick={(e) => setCorForm(e.target.id)}/>
-                                <Form.Check type="radio" id="Branco" label="Branco" onClick={(e) => setCorForm(e.target.id)}/>
-                                <Form.Check type="radio" id="Laranja" label="Laranja" onClick={(e) => setCorForm(e.target.id)}/>
-                                <Form.Check type="radio" id="Amarelo" label="Amarelo" onClick={(e) => setCorForm(e.target.id)}/>
-                                <Form.Check type="radio" id="Vermelho" label="Vermelho" onClick={(e) => setCorForm(e.target.id)}/>  
-                            </div>
-                        </div>
+                        <select name="select" className="numeroPessoa" required onChange={e => setCorForm(e.target.value)} >
+                            <option value="">Selecione uma cor</option>
+                            <option value="Preto">Preto</option>
+                            <option value="Branco">Branco</option>
+                            <option value="Laranja">Laranja</option>
+                            <option value="Amarelo">Amarelo</option>
+                            <option value="Vermelho">Vermelho</option>
+                        </select>
 
                         <div className="id_"><p>Chifre</p></div> 
-                        <div className="id_">
-                            <div className="check-option" style={{marginBottom: "15px", display: "flex", justifyContent: "space-evenly"}}>
-                                <Form.Check type="radio"  id="Chifre" label="Sim" onClick={(e) => setChifreForm(e.target.id)}/>
-                                <Form.Check type="radio" id="Chifre" label="Não" onClick={(e) => setChifreForm(e.target.id)}/>
-                            </div>
-                        </div>
+                        <select name="select" className="numeroPessoa" required onChange={e => setChifreForm(e.target.value)} >
+                            <option value="">Selecione se possui chifre</option>
+                            <option value="Sim">Sim</option>
+                            <option value="Nao">Não</option>
+                        </select>
                         <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Cadastrar</button>
                     </div>            
                 </form>
