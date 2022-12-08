@@ -6,30 +6,50 @@ import Nav from '../../components/nav';
 import Footer from '../../components/footer';
 import rodape from '../../styles/css/footer.css'
 
+import VacinacaoBovinoAPI from '../../scripts/connectionAPI';
+import { login } from '../../scripts/authencation';
+
 const Login = () => {
 
-    const [nomeForm, setNomeForm] = useState('');
+    const [loginForm, setLoginForm] = useState('');
     const [senhaForm, setSenhaForm] = useState('');
 
-    const handleSubmitForm = async e => {}
     const navigate = useNavigate();
+
+    const handleSubmitForm = async e => {
+        e.preventDefault();
+        const payload = {
+            login: loginForm,
+            senha: senhaForm
+        };
+
+        console.log("vai ser enviado: " + payload.login);
+
+        try {
+            const { data } = await VacinacaoBovinoAPI.post('/pessoa/autenticar', payload);
+            login(data.toke, data.id);
+            navigate('/');
+        } catch (error) {
+            alert("Credenciais inválidas!");
+        }
+    };
 
     return (
         <div>
             <Nav/>
-            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Login </h1>
+            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Vacinação de Bovinos </h1>
             <div className="formularioLogin" style={{marginBottom: "10%"}}>
                 <form className="formulario" onSubmit={e => {handleSubmitForm (e)}}>
                     <div className="sub-div">
-                        <div className="id_"><p>Email</p></div> 
-                        <input type="text" className="nomePessoa" onChange={e => setNomeForm(e.target.value)}/>
+                        <div className="id_"><p>Usuário</p></div> 
+                        <input type="text" className="nomePessoa" required onChange={e => setLoginForm(e.target.value)}/>
 
                         <div className="id_"><p>Senha</p></div> 
-                        <input type="text" className="senhaPessoa" onChange={e => setSenhaForm(e.target.value)}/>
+                        <input type="password" className="senhaPessoa" required onChange={e => setSenhaForm(e.target.value)}/>
 
-                        <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Entrar</button>
+                        <button variant="warning" type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px 0 20px 0"}}>Entrar</button>
 
-                        <div className="text-center" style={{marginBottom: "5%"}}><button  className="btn btn-success" style={{backgroundColor:"#6D3B00",borderColor: "#6D3B00"}} variant="warning"  onClick={e => navigate('/cadastrarPessoa')}>Cadastre-se</button></div>
+                        <button  className="btn btn-success" style={{backgroundColor:"#6D3B00",borderColor: "#6D3B00", marginBottom: "5%"}} variant="warning"  onClick={e => navigate('/cadastrarPessoa')}>Cadastre-se</button>
                     </div>            
                 </form>
             </div>
