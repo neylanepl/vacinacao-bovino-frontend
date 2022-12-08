@@ -1,14 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom';
 import '../../styles/css/cadastrarBovino.css';
 import Nav from '../../components/nav';
 
+import { handleGetMethod } from '../../scripts/connectionAPI';
+import VacinacaoBovinoAPI from '../../scripts/connectionAPI';
+
 const CadastrarAplicacao = () => {
-    var vacinas = [];
+    const [vacinaForm, setVacinaForm] = useState(0);
     const [doseForm, setDoseForm] = useState(0);
     const [dataForm, setDataForm] = useState('');
 
-    const handleSubmitForm = async e => {}
+    const navigate = useNavigate();
+
+    const handleSubmitForm = async e => {
+        e.preventDefault();
+
+        const payload = {
+            vacina: vacinaForm,
+            dose: doseForm,
+            data: dataForm
+        };
+
+        console.log(payload);
+
+        try {
+            const { data } = await VacinacaoBovinoAPI.post('/aplicacao/adicionarAplicacao', payload);
+            navigate('/');
+        } catch (error) {
+            alert("Campo(s) preenchido(s) incorretamente!");
+        }
+
+    }
+
+    const vacinasPath = 'vacina/obterListaVacina';
+    const [vacinas, setVacinas] = useState([]);
+    useEffect(() => {
+        handleGetMethod(vacinasPath, setVacinas);
+    }, []);
 
     return(
         <div>
@@ -19,7 +49,7 @@ const CadastrarAplicacao = () => {
                     <div className="sub-div">
                     <div className="id_"><p>Vacina</p></div> 
                         <select className="nomeBovino" name="vacina" 
-                            onChange={(e) => { }}>
+                            onChange={(e) => {setVacinaForm(e.target.value)}}>
                             <option value=""> Selecione uma vacina </option>
                             {vacinas
                                 .map((item, key) => {
