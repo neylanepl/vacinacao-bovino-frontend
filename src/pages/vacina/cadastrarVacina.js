@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
+import { useNavigate } from 'react-router-dom';
 import Nav from '../../components/nav';
 import '../../styles/css/cadastrarVacina.css';
-import { handleGetMethod } from '../../scripts/connectionAPI';
+import VacinacaoBovinoAPI, { handleGetMethod } from '../../scripts/connectionAPI';
 
 const CadastrarVacina = () => {
 
@@ -10,6 +11,8 @@ const CadastrarVacina = () => {
     const [fabricanteForm, setFabricanteForm] = useState(0);
     const [periodoEmDiasForm, setPeriodoEmDiasForm] = useState(0);
     const [informacoesExtrasForm, setInformacoesExtrasForm] = useState('');
+
+    const navigate = useNavigate();
 
     const handleSubmitForm = async e => {
         e.preventDefault();
@@ -21,7 +24,12 @@ const CadastrarVacina = () => {
             idFabricante: fabricanteForm
         };
 
-        console.log(payload);
+        try {
+            const { data } = await VacinacaoBovinoAPI.post('/vacina/adicionarVacina', payload);
+            navigate('/');
+        } catch (error) {
+            alert("Campo(s) preenchido(s) incorretamente!");
+        }
     };
 
     const fabricantesPath = 'fabricante/obterListaFabricante';
