@@ -35,7 +35,7 @@ const CadastrarBovino = () => {
                         <div className="id_"><p>Sexo</p></div> 
                         <div className="id_">
                             <div className="check-option" style={{marginBottom: "15px", display: "flex", justifyContent: "space-evenly"}}>
-                                <Form.Check type="radio"  id="Femea" label="Femea" onClick={(e) => setSexoForm(e.target.id)}/>
+                                <Form.Check type="radio"  id="Femea" label="Fêmea" onClick={(e) => setSexoForm(e.target.id)}/>
                                 <Form.Check type="radio" id="Macho" label="Macho" onClick={(e) => setSexoForm(e.target.id)}/>
                             </div>
                         </div>
@@ -61,8 +61,7 @@ const CadastrarBovino = () => {
                         <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Cadastrar</button>
                     </div>            
                 </form>
-            </div>
-            <Footer/>
+            </div>  
         </div>
     );
 };
