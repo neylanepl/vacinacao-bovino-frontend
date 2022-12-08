@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 
-import { Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import '../../styles/css/cadastrarFabricante.css';
 import Nav from '../../components/nav';
+
+import VacinacaoBovinoAPI from '../../scripts/connectionAPI';
 
 const CadastrarFabricante = () => {
 
@@ -17,7 +19,30 @@ const CadastrarFabricante = () => {
     const [ruaForm, setRuaForm] = useState('');
     const [numeroForm, setNumeroForm] = useState('');
 
-    const handleSubmitForm = async e => {}
+    const navigate = useNavigate();
+
+    const handleSubmitForm = async e => {
+        e.preventDefault();
+        const payload = {
+            nome: nomeForm,
+            ddg: ddgForm,
+            cnpj: cnpjForm,
+            nacionalidadeIndustria: nacionalidadeDaIndustriaForm,
+            cidade: cidadeForm,
+            estado: estadoForm,
+            cep: cepForm,
+            bairro: bairroForm,
+            rua: ruaForm,
+            numero: numeroForm
+        };
+
+        try {
+            const { data } = await VacinacaoBovinoAPI.post('/fabricante/adicionarFabricante', payload);
+            navigate('/');
+        } catch (error) {
+            alert("Campo(s) preenchido(s) incorretamente!");
+        }
+    }
 
     return (
         <div>
