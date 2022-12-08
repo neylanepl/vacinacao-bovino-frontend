@@ -13,4 +13,10 @@ VacinacaoBovinoAPI.interceptors.request.use(async config => {
     return config;
 });
 
+export const handleGetMethod = async (path, setData) => {
+  const result = await VacinacaoBovinoAPI.get(path);
+  setData(result.data);
+}
+
+
 export default VacinacaoBovinoAPI;
