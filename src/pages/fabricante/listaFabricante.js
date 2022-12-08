@@ -48,7 +48,7 @@ const ListaFabricante = () => {
 
                             <td style={{display: "flex", justifyContent: "space-evenly"}}>
 
-                                <button className="btn btn-primary" style={{color: "black", textDecoration: "none"}} variant="warning"  onClick={e => navigate('/editarpessoa')}>
+                                <button className="btn btn-primary" style={{color: "black", textDecoration: "none"}} variant="warning"  onClick={e => navigate('/editarfabricante')}>
                                         Editar
                                         <span className="editar">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
