@@ -17,6 +17,9 @@ const EditarPessoa = () => {
     const [bairroForm, setBairroForm] = useState('');
     const [ruaForm, setRuaForm] = useState('');
     const [numeroForm, setNumeroForm] = useState('');
+    const [loginForm, setLoginForm] = useState('');
+    const [senhaForm, setSenhaForm] = useState('');
+    const [papelForm, setPapelForm] = useState('');
 
     const handleSubmitForm = async e => {}
 
@@ -56,6 +59,15 @@ const EditarPessoa = () => {
 
                         <div className="id_"><p>Numero</p></div> 
                         <input type="number" className="numeroPessoa" onChange={e => setNumeroForm(e.target.value)}/>
+
+                        <div className="id_"><p>Login</p></div> 
+                        <input type="text" className="loginPessoa" disabled onChange={e => setLoginForm(e.target.value)}/>
+
+                        <div className="id_"><p>Senha</p></div> 
+                        <input type="text" className="senhaPessoa" disabled onChange={e => setSenhaForm(e.target.value)}/>
+
+                        <div className="id_"><p>Papel</p></div> 
+                        <input type="number" className="papelPessoa" disabled onChange={e => setPapelForm(e.target.value)}/>
 
 
                         <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Editar</button>
