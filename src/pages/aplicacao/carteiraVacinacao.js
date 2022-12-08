@@ -37,6 +37,10 @@ const CarteiraVacinacao = () => {
                                     Data de nascimento: 
                                     <span text="${carteira.isEmpty()} ? 'none' : ${carteira.get().bovino.aniversario}"></span>
                                 </td>
+                                <td>
+                                    Chifre: 
+                                    <span text="${carteira.isEmpty()} ? 'none' : ${carteira.get().bovino.chifre}"></span>
+                                </td>  
                             </tr>
                             <tr>
                                 <td>
@@ -50,7 +54,7 @@ const CarteiraVacinacao = () => {
                                 <td>
                                     Cor: 
                                     <span text="${carteira.isEmpty()} ? 'none' : ${carteira.get().bovino.cor}"></span>
-                                </td>           
+                                </td>  
                             </tr>
                         </tbody>
                     </table>

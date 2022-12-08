@@ -19,6 +19,7 @@ const ListarVacinas = () => {
                 <table className="table table-bordered table-bordered" >
                     <thead style={{backgroundColor:"#E0E7CA"}}>
                         <tr>
+                            <th scope="col">Identificador</th>
                             <th scope="col">Nome</th>
                             <th scope="col">Fabricante</th>
                             <th scope="col">Periodo (em dias)</th>
@@ -28,6 +29,7 @@ const ListarVacinas = () => {
                     </thead>
                     <tbody>
                         <tr each="vacina: ${vacinas}">
+                            <th scope="row" text="${vacina.id}"></th>
                             <th scope="row" text="${vacina.nome}"></th>
                             <td>Fabricante</td>
                             <td text="${vacina.periodoEmDias}"></td>

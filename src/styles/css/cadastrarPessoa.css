@@ -33,7 +33,7 @@
     margin-top: 1em;
 }
 
-.nomePessoa, .telefonePessoa, .CPFPessoa, .emailPessoa, .cidadePessoa, .estadoPessoa, .CEPPessoa, .bairroPessoa, .ruaPessoa, .numeroPessoa {
+.nomePessoa, .telefonePessoa, .CPFPessoa, .emailPessoa, .cidadePessoa, .estadoPessoa, .CEPPessoa, .bairroPessoa, .ruaPessoa, .numeroPessoa, .loginPessoa, .senhaPessoa, .papelPessoa {
     width: 30em;
     border-radius: 1em;
     border: solid 1.5px #6D3B00;

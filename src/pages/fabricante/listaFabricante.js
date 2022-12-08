@@ -26,6 +26,7 @@ const ListaFabricante = () => {
                         <th scope="col">Cidade</th>
                         <th scope="col">Estado</th>
                         <th scope="col">Cep</th>
+                        <th scope="col">Bairro</th>
                         <th scope="col">Rua</th>
                         <th scope="col">Número</th>
                         <th scope="col"></th>
@@ -34,6 +35,7 @@ const ListaFabricante = () => {
 
                     <tbody className="text-center">
                         <tr>
+                            <td scope="row" text=""></td>
                             <td scope="row" text=""></td>
                             <td scope="row" text=""></td>
                             <td scope="row" text=""></td>

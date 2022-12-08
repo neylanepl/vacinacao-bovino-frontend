@@ -10,6 +10,7 @@ const EditarBovino = () => {
     const [dataForm, setDataForm] = useState('');
     const [sexoForm, setSexoForm] = useState('');
     const [corForm, setCorForm] = useState('');
+    const [chifreForm, setChifreForm] = useState('');
 
     const handleSubmitForm = async e => {}
 
@@ -45,6 +46,14 @@ const EditarBovino = () => {
                                 <Form.Check type="radio" id="Laranja" label="Laranja" onClick={(e) => setCorForm(e.target.id)}/>
                                 <Form.Check type="radio" id="Amarelo" label="Amarelo" onClick={(e) => setCorForm(e.target.id)}/>
                                 <Form.Check type="radio" id="Vermelho" label="Vermelho" onClick={(e) => setCorForm(e.target.id)}/>  
+                            </div>
+                        </div>
+
+                        <div className="id_"><p>Chifre</p></div> 
+                        <div className="id_">
+                            <div className="check-option" style={{marginBottom: "15px", display: "flex", justifyContent: "space-evenly"}}>
+                                <Form.Check type="radio"  id="Chifre" label="Sim" onClick={(e) => setChifreForm(e.target.id)}/>
+                                <Form.Check type="radio" id="Chifre" label="Não" onClick={(e) => setChifreForm(e.target.id)}/>
                             </div>
                         </div>
                         <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Editar</button>
