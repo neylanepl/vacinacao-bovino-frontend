@@ -23,8 +23,6 @@ const Login = () => {
             senha: senhaForm
         };
 
-        console.log("vai ser enviado: " + payload.login);
-
         try {
             const { data } = await VacinacaoBovinoAPI.post('/pessoa/autenticar', payload);
             login(data.toke, data.id);
@@ -47,9 +45,9 @@ const Login = () => {
                         <div className="id_"><p>Senha</p></div> 
                         <input type="password" className="senhaPessoa" required onChange={e => setSenhaForm(e.target.value)}/>
 
-                        <button variant="warning" type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px 0 20px 0"}}>Entrar</button>
+                        <button type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px 0 20px 0"}} variant="warning" >Entrar</button>
 
-                        <button  className="btn btn-success" style={{backgroundColor:"#6D3B00",borderColor: "#6D3B00", marginBottom: "5%"}} variant="warning"  onClick={e => navigate('/cadastrarPessoa')}>Cadastre-se</button>
+                        <button className="btn btn-success" style={{backgroundColor:"#6D3B00",borderColor: "#6D3B00", marginBottom: "5%"}} variant="warning"  onClick={e => navigate('/cadastrarPessoa')}>Cadastre-se</button>
                     </div>            
                 </form>
             </div>

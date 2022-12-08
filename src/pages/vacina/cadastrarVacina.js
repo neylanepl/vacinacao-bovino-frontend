@@ -8,12 +8,18 @@ import rodape from '../../styles/css/footer.css'
 const CadastrarVacina = () => {
 
     var fabricantes = [];
-    const [NomeForm, setNomeForm] = useState('');
+    const [nomeForm, setNomeForm] = useState('');
     const [fabricanteForm, setFabricanteForm] = useState('');
     const [periodoEmDiasForm, setPeriodoEmDiasForm] = useState(0);
     const [informacoesExtrasForm, setInformacoesExtrasForm] = useState('');
 
-    const handleSubmitForm = async e => {}
+    const handleSubmitForm = async e => {
+        e.preventDefault();
+
+        const payload = {
+
+        };
+    };
 
     return(
         <div>

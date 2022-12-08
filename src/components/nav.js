@@ -15,7 +15,7 @@ const Nav = () => {
     return(
             <div  className="d-flex flex-wrap py-3 " style={{background: "#83A93A"}}>
                 {isAuthenticated() 
-                    ? <div>
+                    ? <div style={{display: "flex", flexDirection: "row", justifyContent: "flex-end"}}>
                         <button className="botaoVoltar"  
                             style={{marginRight: "10%"}}
                             onClick={e => navigate('/')}>
