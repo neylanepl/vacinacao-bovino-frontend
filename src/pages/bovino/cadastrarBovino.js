@@ -1,19 +1,40 @@
 import React, { useState } from 'react';
 
-import { Form } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import '../../styles/css/cadastrarBovino.css';
 import Nav from '../../components/nav';
 
+import VacinacaoBovinoAPI from '../../scripts/connectionAPI';
+
 const CadastrarBovino = () => {
 
-    const [NomeForm, setNomeForm] = useState('');
+    const [nomeForm, setNomeForm] = useState('');
     const [pesoForm, setPesoForm] = useState(0);
     const [dataForm, setDataForm] = useState('');
     const [sexoForm, setSexoForm] = useState('');
     const [corForm, setCorForm] = useState('');
-    const [chifreForm, setChifreForm] = useState('');
+    const [chifreForm, setChifreForm] = useState(false);
 
-    const handleSubmitForm = async e => {}
+    const navigate = useNavigate();
+
+    const handleSubmitForm = async e => {
+        e.preventDefault();
+        const payload = {
+            nome: nomeForm,
+            aniversario : dataForm,
+            sexo: sexoForm,
+            cor: corForm,
+            peso: pesoForm,
+            chifre: chifreForm
+        };
+
+        try {
+            const { data } = await VacinacaoBovinoAPI.post('/bovino/adicionarBovino', payload);
+            navigate('/');
+        } catch (error) {
+            alert("Campo(s) preenchido(s) incorretamente!");
+        }
+    }
 
     return(
         <div>
@@ -23,13 +44,13 @@ const CadastrarBovino = () => {
                 <form className="formulario" onSubmit={e => {handleSubmitForm (e)}}>
                     <div className="sub-div">
                         <div className="id_"><p>Nome</p></div> 
-                        <input type="text" className="nomeBovino" onChange={e => setNomeForm(e.target.value)}/>
+                        <input type="text" className="nomeBovino" required onChange={e => setNomeForm(e.target.value)}/>
 
                         <div className="id_"><p>Peso</p></div> 
-                        <input type="number" className="pesoBovino" onChange={e => setPesoForm(e.target.value)}/>
+                        <input type="number" className="pesoBovino" required onChange={e => setPesoForm(e.target.value)}/>
 
                         <div className="id_"><p>Idade</p></div> 
-                        <input type="date" className="idadeBovino" onChange={e => setDataForm(e.target.value)}/>
+                        <input type="date" className="idadeBovino" required onChange={e => setDataForm(e.target.value)}/>
                             
                         <div className="id_"><p>Sexo</p></div> 
                         <select name="select" className="numeroPessoa" required onChange={e => setSexoForm(e.target.value)} >
@@ -49,7 +70,7 @@ const CadastrarBovino = () => {
                         </select>
 
                         <div className="id_"><p>Chifre</p></div> 
-                        <select name="select" className="numeroPessoa" required onChange={e => setChifreForm(e.target.value)} >
+                        <select name="select" className="numeroPessoa" required onChange={e => {e.target.value =='sim' ? setChifreForm(true):setChifreForm(false)}} >
                             <option value="">Selecione se possui chifre</option>
                             <option value="Sim">Sim</option>
                             <option value="Nao">Não</option>
