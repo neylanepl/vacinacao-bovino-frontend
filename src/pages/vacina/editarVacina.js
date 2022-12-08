@@ -18,7 +18,7 @@ const EditarVacina = () => {
         <div>
             <Nav/>
             <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Editar vacina </h1>
-            <div className="formularioCadastroVacinas" >
+            <div className="formularioCadastroVacina" >
                 <form className="formulario" onSubmit={e => {handleSubmitForm (e)}}>
                     <div className="sub-div">
                         <div className="id_"><p>Nome</p></div> 
@@ -45,7 +45,7 @@ const EditarVacina = () => {
                         <div className="id_"><p>Informações Extras</p></div> 
                         <input style={{padding: "5px", paddingLeft: "10px"}} type="text" className="informacaoVacina" onChange={e => setInformacoesExtrasForm(e.target.value)}/>
                         
-                        <button variant="warning"  type="submit" value="submit" className="btn" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Editar</button>
+                        <button variant="warning"  type="submit" value="submit" className="btn btn-success" style={{backgroundColor:"#83A93A", borderColor: "#6D3B00", margin: "40px"}}>Editar</button>
                     </div>            
                 </form>
             </div>
