@@ -3,7 +3,6 @@ import imgVaca from '../../assets/vaca.png'
 
 import { useNavigate } from 'react-router-dom';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 
 import '../../styles/css/inicio.css';
 
@@ -31,8 +30,6 @@ const Inicio = () => {
                 </div>
 
             </div>
-
-            <Footer/>
         </div>
     );
 };

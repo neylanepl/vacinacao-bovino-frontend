@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 
 import { useNavigate } from 'react-router-dom';
-import { Form } from 'react-bootstrap';
 import '../../styles/css/cadastrarPessoa.css';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
-import rodape from '../../styles/css/footer.css';
 
 import VacinacaoBovinoAPI from '../../scripts/connectionAPI';
 
@@ -120,9 +117,6 @@ const CadastrarPessoa = () => {
                     </div>            
                 </form>
             </div>
-            <footer> 
-                <div className="footer"> </div>
-            </footer>
             
         </div>
     );   

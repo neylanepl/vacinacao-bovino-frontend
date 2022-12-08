@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-import { Form } from 'react-bootstrap';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 
 
 const EditarPessoa = () => {
@@ -22,7 +20,7 @@ const EditarPessoa = () => {
     return (
         <div>
             <Nav/>
-            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Cadastro Fabricantes </h1>
+            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Editar Fabricante </h1>
             <div className="formularioFabricante" style={{marginBottom: "10%"}}>
                 <form className="formulario" onSubmit={e => {handleSubmitForm (e)}}>
                     <div className="sub-div">
@@ -61,7 +59,6 @@ const EditarPessoa = () => {
                     </div>            
                 </form>
             </div>
-            <Footer/>
         </div>
     );  
 }

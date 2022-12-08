@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 
 import '../../styles/css/cadastrarBovino.css';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 
 const CadastrarAplicacao = () => {
     var vacinas = [];
@@ -14,7 +13,7 @@ const CadastrarAplicacao = () => {
     return(
         <div>
             <Nav/>
-            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Cadastro de Aplicações de Vacina </h1>
+            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Cadastrar Aplicação de Vacina </h1>
             <div className="formularioCadastroBovino" style={{marginBottom: "10%"}}>
                 <form onSubmit={e => {handleSubmitForm (e)}}>
                     <div className="sub-div">
@@ -43,7 +42,6 @@ const CadastrarAplicacao = () => {
                     </div>            
                 </form>
             </div>
-            <Footer/>
         </div>
     );
 };

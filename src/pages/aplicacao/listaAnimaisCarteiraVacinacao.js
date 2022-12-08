@@ -2,7 +2,6 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 
 const ListaAnimaisCarteiraVacinacao = () => {
 
@@ -59,7 +58,6 @@ const ListaAnimaisCarteiraVacinacao = () => {
                     </tbody>
                 </table>
             </div>
-            <Footer/>
         </div>
     );
 };

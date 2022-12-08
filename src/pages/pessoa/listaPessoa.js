@@ -2,8 +2,6 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
-import rodape from '../../styles/css/footer.css'
 
 const ListaPessoa = () => {
 
@@ -74,9 +72,6 @@ const ListaPessoa = () => {
                 </table>
 
             </div>
-            
-
-           <Footer/>
         </div>
     );
 

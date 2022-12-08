@@ -2,7 +2,6 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 
 const CarteiraVacinacao = () => {
     const navigate = useNavigate();
@@ -92,7 +91,6 @@ const CarteiraVacinacao = () => {
                     </table>
                 </div>
             </div>
-            <Footer/>
         </div>
     );
 };

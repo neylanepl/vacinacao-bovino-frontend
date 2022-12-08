@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 import '../../styles/css/cadastrarVacina.css';
-import rodape from '../../styles/css/footer.css'
 import { handleGetMethod } from '../../scripts/connectionAPI';
 
 const CadastrarVacina = () => {
@@ -36,7 +34,7 @@ const CadastrarVacina = () => {
     return(
         <div>
             <Nav/>
-            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Cadastrar vacina </h1>
+            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Cadastrar Vacina </h1>
             <div className="formularioCadastroVacina" >
                 <form className="formulario" onSubmit={e => {handleSubmitForm (e)}}>
                     <div className="sub-div">
@@ -68,7 +66,6 @@ const CadastrarVacina = () => {
                     </div>            
                 </form>
             </div>
-           {/* <Footer/> */}
         </div>
     );
 };

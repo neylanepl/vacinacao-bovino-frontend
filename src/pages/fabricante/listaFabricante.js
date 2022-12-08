@@ -2,7 +2,6 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 
 
 const ListaFabricante = () => {
@@ -12,7 +11,7 @@ const ListaFabricante = () => {
     return(
         <div>
             <Nav/>
-            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}>Fabricantes cadastrados no sistema</h1>
+            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}>Fabricantes Cadastrados</h1>
             <div style={{margin: "5%", marginLeft: "20%", marginRight: "20%"}}>
                 <div className="text-center" style={{marginBottom: "5%"}}><button  className="btn btn-success" style={{backgroundColor:"#83A93A",borderColor: "#6D3B00"}} variant="warning"  onClick={e => navigate('/cadastrarFabricante')}>Cadastrar Fabricante</button></div>
                 
@@ -76,7 +75,6 @@ const ListaFabricante = () => {
                 </table>
 
             </div>
-            <Footer/>
         </div>
     );
 

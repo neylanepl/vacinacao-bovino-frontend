@@ -2,7 +2,6 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 import '../../styles/css/listarVacinas.css';
 
 const ListarVacinas = () => {
@@ -12,7 +11,7 @@ const ListarVacinas = () => {
     return(
         <div>
             <Nav/>
-            <p className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}>Vacinas</p>
+            <p className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}>Vacinas Cadastradas</p>
             <div style={{margin: "5%", marginLeft: "20%", marginRight: "20%"}}>
                 <div className="text-center" style={{marginBottom: "5%"}}><button className="btn btn-success" style={{backgroundColor:"#83A93A",borderColor: "#6D3B00"}} variant="warning"  onClick={e => navigate('/cadastrarvacina')}>Cadastrar Vacina</button></div>
 
@@ -58,7 +57,6 @@ const ListarVacinas = () => {
                     </tbody>
                 </table>
             </div>
-            <Footer/>
         </div>
     );
 };

@@ -1,10 +1,7 @@
 import React, { useState } from 'react';
 
-import { Form } from 'react-bootstrap';
 import '../../styles/css/cadastrarPessoa.css';
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
-import rodape from '../../styles/css/footer.css'
 
 const EditarPessoa = () => {
     const [nomeForm, setNomeForm] = useState('');
@@ -74,9 +71,6 @@ const EditarPessoa = () => {
                     </div>            
                 </form>
             </div>
-            <footer> 
-                <div className="footer"> </div>
-            </footer>
         </div>
     );  
 }

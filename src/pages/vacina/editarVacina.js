@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 
 import Nav from '../../components/nav';
-import Footer from '../../components/footer';
 import '../../styles/css/cadastrarVacina.css';
 
 const EditarVacina = () => {
@@ -17,7 +16,7 @@ const EditarVacina = () => {
     return(
         <div>
             <Nav/>
-            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Editar vacina </h1>
+            <h1 className="fs-1 text-center" style={{background: "#E0E7CA", padding: "20px"}}> Editar Vacina </h1>
             <div className="formularioCadastroVacina" >
                 <form className="formulario" onSubmit={e => {handleSubmitForm (e)}}>
                     <div className="sub-div">
@@ -49,7 +48,6 @@ const EditarVacina = () => {
                     </div>            
                 </form>
             </div>
-            <Footer/>
         </div>
     );
 };
