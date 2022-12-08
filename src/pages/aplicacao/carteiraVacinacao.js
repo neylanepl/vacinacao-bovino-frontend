@@ -7,6 +7,16 @@ import Footer from '../../components/footer';
 const CarteiraVacinacao = () => {
     const navigate = useNavigate();
 
+    function createData(vacina, dose, data) {
+        return { vacina, dose, data };
+      }
+      
+    const rows = [
+        createData('Coronavac', "1°", "20/02/2022"),
+        createData('Pfizer', "2°", "20/02/2022"),
+        createData('Jenssen', "3°", "20/02/2022"),
+    ];
+
     return(
         <div>
             <Nav/>
@@ -61,24 +71,23 @@ const CarteiraVacinacao = () => {
                 </div>
 
                 <div style={{marginLeft: "20%", marginRight: "20%", marginBottom: "10%"}}>
+                    <div className="text-center" style={{background: "#E0E7CA", padding: "1%"}}><strong>Carteira de Vacinação</strong></div>
                     <table className="table table-bordered table-bordered" >
-                        <div className="text-center" style={{background: "#E0E7CA", padding: "1%"}}><strong>Carteira de Vacinação</strong></div>
                         <tbody>
                             <tr>
-                                <td>Coronavac
-                                    Dose 1
-                                    20/02/2022</td>
+                                <th>Vacina</th>
+                                <th>Dose</th>
+                                <th>Data</th>
                             </tr>
-                            <tr>
-                                <td>Pfizer
-                                    Dose 3
-                                    20/02/2022</td>
-                            </tr>
-                            <tr>
-                                <td>Jenssen
-                                    Dose 1
-                                    20/02/2022</td>
-                            </tr>
+                            {rows.map((row) => (
+                                <tr key={row.vacina} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
+                                    <td component="th" scope="row">
+                                        {row.vacina}
+                                    </td>
+                                    <td align="right">{row.dose}</td>
+                                    <td align="right">{row.data}</td>
+                                </tr>
+                             ))}
                         </tbody>
                     </table>
                 </div>
