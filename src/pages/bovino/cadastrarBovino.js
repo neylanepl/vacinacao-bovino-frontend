@@ -70,7 +70,7 @@ const CadastrarBovino = () => {
                         </select>
 
                         <div className="id_"><p>Chifre</p></div> 
-                        <select name="select" className="numeroPessoa" required onChange={e => {e.target.value =='sim' ? setChifreForm(true):setChifreForm(false)}} >
+                        <select name="select" className="numeroPessoa" required onChange={e => {e.target.value === 'Sim' ? setChifreForm(true):setChifreForm(false)}} >
                             <option value="">Selecione se possui chifre</option>
                             <option value="Sim">Sim</option>
                             <option value="Nao">Não</option>
