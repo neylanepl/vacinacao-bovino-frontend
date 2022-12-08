@@ -25,7 +25,7 @@ const Login = () => {
 
         try {
             const { data } = await VacinacaoBovinoAPI.post('/pessoa/autenticar', payload);
-            login(data.toke, data.id);
+            login(data.token, data.id);
             navigate('/');
         } catch (error) {
             alert("Credenciais inválidas!");
