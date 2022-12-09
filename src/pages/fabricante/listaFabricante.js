@@ -35,6 +35,7 @@ const ListaFabricante = () => {
                         <th scope="col">Bairro</th>
                         <th scope="col">Rua</th>
                         <th scope="col">Número</th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
 

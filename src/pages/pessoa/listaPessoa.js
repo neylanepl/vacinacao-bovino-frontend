@@ -36,6 +36,7 @@ const ListaPessoa = () => {
                         <th scope="col">Rua</th>
                         <th scope="col">Número</th>
                         <th scope="col">Papel</th>
+                        <th scope="col"></th>
                     </tr>
                     </thead>
 
@@ -54,6 +55,7 @@ const ListaPessoa = () => {
                                     <td scope="row">{item.rua}</td>
                                     <td scope="row">{item.numero}</td>
                                     <td scope="row">{item.papel}</td>
+
                                     <td style={{display: "flex", justifyContent: "space-evenly"}}>
 
                                         <button className="btn btn-primary" style={{color: "white", textDecoration: "none", margin: "2%"}} variant="warning"  onClick={e => navigate('/editarpessoa')}>
