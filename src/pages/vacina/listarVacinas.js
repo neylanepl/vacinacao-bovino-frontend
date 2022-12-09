@@ -38,11 +38,11 @@ const ListarVacinas = () => {
                         {vacinas.map((item, key) => {
                             return(
                                 <tr key={key}>
-                                    <th scope="row" text="${vacina.id}"> {item.id} </th>
-                                    <th scope="row" text="${vacina.nome}"></th>
-                                    <td>Fabricante</td>
-                                    <td text="${vacina.periodoEmDias}"></td>
-                                    <td text="${vacina.informacoesExtras}"></td>
+                                    <td> {item.id} </td>
+                                    <td> {item.nome}</td>
+                                    <td>{item.idFabricante}</td>
+                                    <td>{item.periodoEmDias}</td>
+                                    <td>{item.informacoesExtras}</td>
                                     <td style={{display: "flex", justifyContent: "space-evenly"}}>
                                         <button className="btn btn-primary"
                                                 style={{color: "white", textDecoration: "none"}} variant="warning"  onClick={e => navigate('/editarvacina')}>
