@@ -55,7 +55,7 @@ const CadastrarAplicacao = () => {
                                 .map((item, key) => {
                                     return (
                                         <option key={key} value={item.id}>
-                                            {item.title}
+                                            {item.nome}
                                         </option>
                                     );
                                 })
